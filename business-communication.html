@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
@@ -8,9 +9,10 @@
 
     <!-- VLabs Icon  -->
     <link rel="shortcut icon" href="images/icon.svg">
- 
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/bundle.css?ver=112">
@@ -30,29 +32,44 @@
                     <div class="nk-navbar-wrap">
                         <div class="nk-navbar-logo logo">
                             <a href="./" class="logo-link">
-                                <img class="logo-dark" src="images/logo-dark.svg" srcset="images/logo-dark2x.svg 2x" alt="logo">
-                                <img class="logo-light" src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x" alt="logo">
+                                <img class="logo-dark" src="images/logo-dark.svg" srcset="images/logo-dark2x.svg 2x"
+                                    alt="logo">
+                                <img class="logo-light" src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                    alt="logo">
                             </a>
                         </div><!-- .nk-navbar-logo -->
                         <div class="nk-navbar-toggle d-lg-none">
-                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em class="icon-menu icon ni ni-menu"></em><em class="icon-close icon ni ni-cross"></em></a>
+                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em
+                                    class="icon-menu icon ni ni-menu"></em><em
+                                    class="icon-close icon ni ni-cross"></em></a>
                         </div><!-- .nk-navbar-toggle -->
                         <nav class="nk-navbar-menu" id="navbar-menu">
                             <ul class="nk-menu">
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="@{/}">Home</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="@{/#about}">About Vlabs</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="@{/#team}">Vlabs Team</a></li>
-                                <li class="nk-menu-item"><a class="nav-link nk-menu-link" th:href="@{/explore-labs}">Explore Labs</a></li>
-                                <li class="nk-menu-item"><a class="nav-link nk-menu-link" th:href="@{/suggestion-space}">Suggestion Space</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html">Home</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html#about">About Vlabs</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html#team">Vlabs Team</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link" th:href="labs.html">Explore
+                                        Labs</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link"
+                                        th:href="suggestion.html">Suggestion Space</a></li>
                             </ul>
                             <ul class="nk-menu-btns">
+                                <li class="nk-menu-item"><a href="login.html"
+                                        class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                            </ul>
+                            <!-- <ul class="nk-menu-btns">
                                 <div th:if="${login==false}">
-                                    <li class="nk-menu-item"><a th:href="@{/login}" class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                                    <li class="nk-menu-item"><a th:href="login.html"
+                                            class="btn btn-sm scrollto nav-link">LOGIN</a></li>
                                 </div>
                                 <div th:if="${login==true}">
-                                    <li class="nk-menu-item"><a th:href="@{/logout}" class="btn btn-sm scrollto nav-link">LOGOUT</a></li>
+                                    <li class="nk-menu-item"><a th:href="@{/logout}"
+                                            class="btn btn-sm scrollto nav-link">LOGOUT</a></li>
                                 </div>
-                            </ul>
+                            </ul> -->
                         </nav><!-- .nk-navbar-menu -->
                     </div><!-- .nk-navbar-wrap -->
                 </div><!-- .container -->
@@ -82,54 +99,77 @@
                                 <div class="col">
                                     <!-- Tab -->
                                     <nav>
-                                        <div class="nav nav-tabs flex-column flex-md-row shadow-sm border-soft justify-content-around bg-white rounded lab-nav-tabs mb-3 py-3" id="nav-tab" role="tablist">
-                                            <a class="nav-item nav-link lab-nav-link active" id="pre-test-tab" data-toggle="tab" href="#pre-test" role="tab" aria-controls="pre-test" aria-selected="true"><i class="icon ni ni-clipboad-check-fill"></i>Pre-Test</a>
-                                            <a class="nav-item nav-link lab-nav-link" id="procedure-tab" data-toggle="tab" href="#procedure" role="tab" aria-controls="procedure" aria-selected="false"><i class="icon ni ni-todo-fill"></i>Procedure</a>
-                                            <a class="nav-item nav-link lab-nav-link" id="simulation-tab" data-toggle="tab" href="#simulation" role="tab" aria-controls="simulation" aria-selected="false"><i class="icon ni ni-template-fill"></i>Simulation</a>
-                                            <a class="nav-item nav-link lab-nav-link" id="references-tab" data-toggle="tab" href="#references" role="tab" aria-controls="references" aria-selected="false"><i class="icon ni ni-book-fill"></i>References</a>
+                                        <div class="nav nav-tabs flex-column flex-md-row shadow-sm border-soft justify-content-around bg-white rounded lab-nav-tabs mb-3 py-3"
+                                            id="nav-tab" role="tablist">
+                                            <a class="nav-item nav-link lab-nav-link active" id="pre-test-tab"
+                                                data-toggle="tab" href="#pre-test" role="tab" aria-controls="pre-test"
+                                                aria-selected="true"><i
+                                                    class="icon ni ni-clipboad-check-fill"></i>Pre-Test</a>
+                                            <a class="nav-item nav-link lab-nav-link" id="procedure-tab"
+                                                data-toggle="tab" href="#procedure" role="tab" aria-controls="procedure"
+                                                aria-selected="false"><i class="icon ni ni-todo-fill"></i>Procedure</a>
+                                            <a class="nav-item nav-link lab-nav-link" id="simulation-tab"
+                                                data-toggle="tab" href="#simulation" role="tab"
+                                                aria-controls="simulation" aria-selected="false"><i
+                                                    class="icon ni ni-template-fill"></i>Simulation</a>
+                                            <a class="nav-item nav-link lab-nav-link" id="references-tab"
+                                                data-toggle="tab" href="#references" role="tab"
+                                                aria-controls="references" aria-selected="false"><i
+                                                    class="icon ni ni-book-fill"></i>References</a>
                                         </div>
                                     </nav>
                                     <!-- Tab -->
                                     <div class="tab-content mt-4 mt-lg-5" id="nav-tabContent">
                                         <!-- Pre-Test Tab -->
-                                        <div class="tab-pane fade show active" id="pre-test" role="tabpanel" aria-labelledby="pre-test-tab">
+                                        <div class="tab-pane fade show active" id="pre-test" role="tabpanel"
+                                            aria-labelledby="pre-test-tab">
                                             <div class="text-center">
-                                                <p class="mt-5">This simulation does not require the pre-test. You can directly jump to the simulation.</p>
+                                                <p class="mt-5">This simulation does not require the pre-test. You can
+                                                    directly jump to the simulation.</p>
                                             </div>
                                         </div>
                                         <!-- Procedure Tab -->
-                                        <div class="tab-pane fade" id="procedure" role="tabpanel" aria-labelledby="procedure-tab">
+                                        <div class="tab-pane fade" id="procedure" role="tabpanel"
+                                            aria-labelledby="procedure-tab">
                                             <div class="text-center">
-                                                <p class="mt-5">This simulation does not require the procedure. You can directly jump to the simulation.</p>        
+                                                <p class="mt-5">This simulation does not require the procedure. You can
+                                                    directly jump to the simulation.</p>
                                             </div>
                                         </div>
                                         <!-- Simulation Tab -->
-                                        <div class="tab-pane fade" id="simulation" role="tabpanel" aria-labelledby="simulation-tab">
+                                        <div class="tab-pane fade" id="simulation" role="tabpanel"
+                                            aria-labelledby="simulation-tab">
                                             <div id="canvastab" class="row">
                                                 <div class="col-12">
                                                     <!-- <p style="font-size: 16px;"><a target="_blank" href="round-template/experiment/simulation/simulator.html"> Click here for simulation</a></p> -->
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- References Tab -->
-                                        <div class="tab-pane fade" id="references" role="tabpanel" aria-labelledby="references-tab">
+                                        <div class="tab-pane fade" id="references" role="tabpanel"
+                                            aria-labelledby="references-tab">
                                             <div class="row justify-content-between">
                                                 <div class="col-md-10 mx-auto">
                                                     <p>
-                                                        1. Hall, Edward, T. <i>The Silent Language.</i> Greenwich, Conn,: Fawcett, 1959.   
+                                                        1. Hall, Edward, T. <i>The Silent Language.</i> Greenwich,
+                                                        Conn,: Fawcett, 1959.
                                                     </p>
                                                     <p>
-                                                        2. Amos, Julie-Ann. <i>Handling Tough Job Interviews.</i> Mumbai: Jaico Publishing, 2004.
+                                                        2. Amos, Julie-Ann. <i>Handling Tough Job Interviews.</i>
+                                                        Mumbai: Jaico Publishing, 2004.
                                                     </p>
                                                     <p>
-                                                        3. Hasson, Gill. <i>Brilliant Communication Skills.</i> Great Britain: Pearson Education, 2012.
+                                                        3. Hasson, Gill. <i>Brilliant Communication Skills.</i> Great
+                                                        Britain: Pearson Education, 2012.
                                                     </p>
                                                     <p>
-                                                        4. Thill, John V. & Courtland L. Bovée, Excellence in Business Communication, 10th edition. Boston : Pearson, 2013.    
+                                                        4. Thill, John V. & Courtland L. Bovée, Excellence in Business
+                                                        Communication, 10th edition. Boston : Pearson, 2013.
                                                     </p>
                                                     <p>
-                                                        5. Rutherford, Andrea J. Basic Communication Skills for Technology: Second Edition. Delhi: Pearson Education, 2007.  
+                                                        5. Rutherford, Andrea J. Basic Communication Skills for
+                                                        Technology: Second Edition. Delhi: Pearson Education, 2007.
                                                     </p>
                                                 </div>
                                             </div>
@@ -154,7 +194,8 @@
                                 <div class="wgs wgs-about">
                                     <div class="wgs-logo logo">
                                         <a href="./" class="logo-link">
-                                            <img src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x" alt="logo">
+                                            <img src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                                alt="logo">
                                         </a>
                                     </div>
                                     <div class="wgs-about-text">
@@ -172,10 +213,10 @@
                                 <div class="wgs wgs-menu">
                                     <h6 class="wgs-title">Quick Link</h6>
                                     <ul class="wgs-links">
-                                        <li><a class="scrollto" th:href="@{/explore-labs}">Explore Labs</a></li>
-                                        <li><a class="scrollto" th:href="@{/#team}">Vlabs Team</a></li>
-                                        <li><a class="scrollto" th:href="@{/#about}">About Vlabs</a></li>
-                                        <li><a class="scrollto" th:href="@{/suggestion-space}">Suggestion Space</a></li>
+                                        <li><a class="scrollto" th:href="labs.html">Explore Labs</a></li>
+                                        <li><a class="scrollto" th:href="index.html#team">Vlabs Team</a></li>
+                                        <li><a class="scrollto" th:href="index.html#about">About Vlabs</a></li>
+                                        <li><a class="scrollto" th:href="suggestion.html">Suggestion Space</a></li>
                                     </ul>
                                 </div><!-- .wgs -->
                             </div><!-- .col -->
@@ -195,7 +236,8 @@
                     <div class="nk-footer-bottom">
                         <div class="row align-items-center">
                             <div class="col-md-6">
-                                <p class="nk-copyright">&copy; 2021 Virtual Labs. Made by <a href="https://thakkarkeyur.blogspot.com/" target="_blank">Keyur Thakkar</a>.</p>
+                                <p class="nk-copyright">&copy; 2021 Virtual Labs. Made by <a
+                                        href="https://thakkarkeyur.blogspot.com/" target="_blank">Keyur Thakkar</a>.</p>
                             </div><!-- .col -->
                             <div class="col-md-6">
                                 <ul class="nk-footer-links justify-content-md-end">
@@ -210,12 +252,15 @@
     </div><!-- .nk-wrap -->
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
-    <!-- Bootstrap Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-	<!-- JavaScript -->
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
     <script src="scripts/main.js?ver=112"></script>
     <script>
         $("#simulation-tab").on('shown.bs.tab', function () {
@@ -224,4 +269,5 @@
         })
     </script>
 </body>
+
 </html>

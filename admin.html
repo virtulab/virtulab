@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
@@ -8,14 +9,15 @@
 
     <!-- VLabs Icon  -->
     <link rel="shortcut icon" href="images/icon.svg">
- 
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/bundle.css?ver=112">
     <link rel="stylesheet" href="css/style.css?ver=112">
-    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-2.0.3.css"/>
+    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-2.0.3.css" />
 
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap4.css">
@@ -34,29 +36,39 @@
                     <div class="nk-navbar-wrap">
                         <div class="nk-navbar-logo logo">
                             <a href="./" class="logo-link">
-                                <img class="logo-dark" src="images/logo-dark.svg" srcset="images/logo-dark2x.svg 2x" alt="logo">
-                                <img class="logo-light" src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x" alt="logo">
+                                <img class="logo-dark" src="images/logo-dark.svg" srcset="images/logo-dark2x.svg 2x"
+                                    alt="logo">
+                                <img class="logo-light" src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                    alt="logo">
                             </a>
                         </div><!-- .nk-navbar-logo -->
                         <div class="nk-navbar-toggle d-lg-none">
-                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em class="icon-menu icon ni ni-menu"></em><em class="icon-close icon ni ni-cross"></em></a>
+                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em
+                                    class="icon-menu icon ni ni-menu"></em><em
+                                    class="icon-close icon ni ni-cross"></em></a>
                         </div><!-- .nk-navbar-toggle -->
                         <nav class="nk-navbar-menu" id="navbar-menu">
                             <ul class="nk-menu">
-                                <!-- <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="@{/}">Home</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="@{/#about}">About Vlabs</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="@{/#team}">Vlabs Team</a></li>
-                                <li class="nk-menu-item"><a class="nav-link nk-menu-link"  th:href="@{/explore-labs}">Explore Labs</a></li>
+                                <!-- <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="index.html">Home</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="index.html#about">About Vlabs</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="index.html#team">Vlabs Team</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link"  th:href="labs.html">Explore Labs</a></li>
                                 <li class="nk-menu-item"><a class="nav-link nk-menu-link" href="suggestion.html">Suggestion Space</a></li> -->
                             </ul>
                             <ul class="nk-menu-btns">
+                                <li class="nk-menu-item"><a href="login.html"
+                                        class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                            </ul>
+                            <!-- <ul class="nk-menu-btns">
                                 <div th:if="${login==false}">
-                                    <li class="nk-menu-item"><a th:href="@{/login}" class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                                    <li class="nk-menu-item"><a th:href="login.html"
+                                            class="btn btn-sm scrollto nav-link">LOGIN</a></li>
                                 </div>
                                 <div th:if="${login==true}">
-                                    <li class="nk-menu-item"><a th:href="@{/logout}" class="btn btn-sm scrollto nav-link">LOGOUT</a></li>
+                                    <li class="nk-menu-item"><a th:href="@{/logout}"
+                                            class="btn btn-sm scrollto nav-link">LOGOUT</a></li>
                                 </div>
-                            </ul>
+                            </ul> -->
                         </nav><!-- .nk-navbar-menu -->
                     </div><!-- .nk-navbar-wrap -->
                 </div><!-- .container -->
@@ -91,9 +103,9 @@
                                     <div class="text-uppercase counter-label">WORKSHOPS</div>
                                 </div>
                             </a>
-                        </div>  
+                        </div>
                         <div class="col-6 col-xl-3">
-                            <a class="block block-link-shadow text-right bg-white admin-block" >
+                            <a class="block block-link-shadow text-right bg-white admin-block">
                                 <div class="block-content block-content-full clearfix">
                                     <div class="float-left mt-2 d-none d-sm-block">
                                         <i class="icon ni ni-building text-body-bg-dark counter-icon"></i>
@@ -120,7 +132,7 @@
                                     <div class="float-left mt-2 d-none d-sm-block">
                                         <i class="icon ni ni-users text-body-bg-dark counter-icon"></i>
                                     </div>
-                                    <div class="counter counter-num"  th:utext="${totalRegisteredUsers}">0</div>
+                                    <div class="counter counter-num" th:utext="${totalRegisteredUsers}">0</div>
                                     <div class="text-uppercase counter-label">Registered Users</div>
                                 </div>
                             </a>
@@ -129,7 +141,7 @@
                     </div>
                 </div><!-- .container --> <br>
 
-            <!-- <div class="container">
+                <!-- <div class="container">
                 <div class="section-content section-content-boxed"> 
                     <div class="col-md-12 col-lg-12">
                         <div class="card visitors-map vmap-card">
@@ -205,36 +217,36 @@
                     </div>
                 </div>   
             </div> -->
-            
-<br><br>
-            <div class="container">
-                 <!-- Dynamic Table Full -->
-            <div class="section-content section-content-boxed">
-                 <div class="block">
-                    <div class="block-header block-header-default">
-                        <h4 class="block-title title">Registered Users</h4>
-                    </div>
-                    <div class="block-content block-content-full">
-                        <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
-                        <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">ID</th>
-                                    <th>Name</th>
-                                    <th class="d-none d-sm-table-cell" style="width: 27%;">Nodal Center</th>
-                                    <th class="text-center" style="width: 21%;">Course</th>
-                                    <th class="d-none d-sm-table-cell" style="width: 25%;">Email</th>
-                                </tr>
-                            </thead>    
-                            <tbody>
-                                <tr th:each ="user : ${userList}">
-                                    <td class="text-center" th:utext="${user.userId}"></td>
-                                    <td class="font-w600" th:utext="${user.firstName}"></td>
-                                    <td class="d-none d-sm-table-cell" th:utext="${user.discipline}"></td>
-                                    <td class="text-center" th:utext="${user.course}"></td>
-                                    <td class="d-none d-sm-table-cell" th:utext="${user.email}"></td>
-                                </tr>
-                                <!-- <tr>
+
+                <br><br>
+                <div class="container">
+                    <!-- Dynamic Table Full -->
+                    <div class="section-content section-content-boxed">
+                        <div class="block">
+                            <div class="block-header block-header-default">
+                                <h4 class="block-title title">Registered Users</h4>
+                            </div>
+                            <div class="block-content block-content-full">
+                                <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                                <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th>Name</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 27%;">Nodal Center</th>
+                                            <th class="text-center" style="width: 21%;">Course</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 25%;">Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="user : ${userList}">
+                                            <td class="text-center" th:utext="${user.userId}"></td>
+                                            <td class="font-w600" th:utext="${user.firstName}"></td>
+                                            <td class="d-none d-sm-table-cell" th:utext="${user.discipline}"></td>
+                                            <td class="text-center" th:utext="${user.course}"></td>
+                                            <td class="d-none d-sm-table-cell" th:utext="${user.email}"></td>
+                                        </tr>
+                                        <!-- <tr>
                                     <td class="text-center">2</td>
                                     <td class="font-w600">Dhrumil Gohil</td>
                                     <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
@@ -367,43 +379,44 @@
                                     <td class="text-center">MBA</td>
                                     <td class="d-none d-sm-table-cell">dhruvinthakkar@gmail.com</td>
                                 </tr> -->
-                            </tbody>
-                        </table>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END Dynamic Table Full -->
                     </div>
                 </div>
-                <!-- END Dynamic Table Full -->
-            </div>
-            </div>
 
-<br><br>
-            <div class="container">
-                 <!-- Dynamic Table Full -->
-            <div class="section-content section-content-boxed">
-                 <div class="block">
-                    <div class="block-header block-header-default">
-                        <h4 class="block-title title">User Suggestions</h4>
-                    </div>
-                    <div class="block-content block-content-full">
-                        <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
-                        <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">ID</th>
-                                    <th>Email</th>
-                                    <th class="text-center" style="width: 17%;">Date</th>
-                                    <th class="d-none d-sm-table-cell" style="width: 25%;">Subject</th>
-                                    <th class="d-none d-sm-table-cell" style="width: 32%;">Message</th>
-                                </tr>
-                            </thead>    
-                            <tbody>
-                                <tr th:each ="suggestion : ${suggestions}">
-                                    <td class="text-center" th:utext="${suggestion.suggesionId}"></td>
-                                    <td class="font-w600" th:utext="${suggestion.email}"></td>
-                                    <td class="text-center" th:utext="${#dates.format(suggestion.createdDate, 'dd-MMM-yyyy')}"></td>
-                                    <td class="d-none d-sm-table-cell" th:utext="${suggestion.subject}"></td>
-                                    <td class="d-none d-sm-table-cell" th:utext="${suggestion.message}"></td>
-                                </tr>
-                                <!-- <tr>
+                <br><br>
+                <div class="container">
+                    <!-- Dynamic Table Full -->
+                    <div class="section-content section-content-boxed">
+                        <div class="block">
+                            <div class="block-header block-header-default">
+                                <h4 class="block-title title">User Suggestions</h4>
+                            </div>
+                            <div class="block-content block-content-full">
+                                <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                                <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th>Email</th>
+                                            <th class="text-center" style="width: 17%;">Date</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 25%;">Subject</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 32%;">Message</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="suggestion : ${suggestions}">
+                                            <td class="text-center" th:utext="${suggestion.suggesionId}"></td>
+                                            <td class="font-w600" th:utext="${suggestion.email}"></td>
+                                            <td class="text-center"
+                                                th:utext="${#dates.format(suggestion.createdDate, 'dd-MMM-yyyy')}"></td>
+                                            <td class="d-none d-sm-table-cell" th:utext="${suggestion.subject}"></td>
+                                            <td class="d-none d-sm-table-cell" th:utext="${suggestion.message}"></td>
+                                        </tr>
+                                        <!-- <tr>
                                     <td class="text-center">2</td>
                                     <td class="font-w600">Dhrumil Gohil</td>
                                     <td class="text-center">Apr 20, 2021</td>
@@ -438,13 +451,13 @@
                                     <td class="d-none d-sm-table-cell">Chemical Engineering</td>
                                     <td class="d-none d-sm-table-cell">ameysatwe@gmail.com</td>
                                 </tr> -->
-                            </tbody>
-                        </table>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END Dynamic Table Full -->
                     </div>
                 </div>
-                <!-- END Dynamic Table Full -->
-            </div>
-            </div>
 
             </section><!-- .section -->
         </main><!-- .nk-pages -->
@@ -459,7 +472,8 @@
                                 <div class="wgs wgs-about">
                                     <div class="wgs-logo logo">
                                         <a href="./" class="logo-link">
-                                            <img src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x" alt="logo">
+                                            <img src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                                alt="logo">
                                         </a>
                                     </div>
                                     <div class="wgs-about-text">
@@ -500,7 +514,8 @@
                     <div class="nk-footer-bottom">
                         <div class="row align-items-center">
                             <div class="col-md-6">
-                                <p class="nk-copyright">&copy; 2021 Virtual Labs. Made by <a href="https://thakkarkeyur.blogspot.com/" target="_blank">Keyur Thakkar</a>.</p>
+                                <p class="nk-copyright">&copy; 2021 Virtual Labs. Made by <a
+                                        href="https://thakkarkeyur.blogspot.com/" target="_blank">Keyur Thakkar</a>.</p>
                             </div><!-- .col -->
                             <div class="col-md-6">
                                 <ul class="nk-footer-links justify-content-md-end">
@@ -515,16 +530,19 @@
     </div><!-- .nk-wrap -->
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
-    <!-- Bootstrap Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-	<!-- JavaScript -->
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
     <script src="scripts/main.js?ver=112"></script>
     <script src="js/counter.js"></script>
     <script src="js/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
-    <!--<script src="plugins/datatables/datatables.js"></script>-->    <!-- Datatable Plugin Js -->
+    <!--<script src="plugins/datatables/datatables.js"></script>--> <!-- Datatable Plugin Js -->
 
     <!-- Page JS Plugins -->
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
@@ -532,6 +550,7 @@
 
     <!-- Page JS Code -->
     <script src="js/be_tables_datatables.min.js"></script>
-    
+
 </body>
+
 </html>
